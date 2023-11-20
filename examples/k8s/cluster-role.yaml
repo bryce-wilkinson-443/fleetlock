@@ -3,6 +3,14 @@ kind: ClusterRole
 metadata:
   name: fleetlock
 rules:
+  - verbs:
+      - use
+    apiGroups:
+      - policy
+    resources:
+      - podsecuritypolicies
+    resourceNames:
+      - cadvisor
   - apiGroups:
       - ""
     resources:
